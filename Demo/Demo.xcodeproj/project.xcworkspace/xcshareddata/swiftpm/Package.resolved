@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "TweakPane",
+        "repositoryURL": "https://github.com/antranapp/TweakPane",
+        "state": {
+          "branch": "master",
+          "revision": "69a0341cf66e229d6f07a2ad8d94489e7e20c43c",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
