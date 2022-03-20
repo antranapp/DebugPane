@@ -22,6 +22,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
     
         DebugPane.start {
+            BuildInfoBlade()
             InputBlade(name: "Dark Mode", binding: InputBinding(self.$appService.darkModeEnabled))
         }
         
