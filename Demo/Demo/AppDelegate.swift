@@ -6,6 +6,9 @@ import DebugPane
 import SwiftUI
 import Combine
 import UIKit
+import DebugPane_LocalConsole
+import Logging
+import Pulse
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +20,8 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        LoggingSystem.bootstrap(PersistentLogHandler.init)
+
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = ViewController(appService: appService)
         window?.makeKeyAndVisible()
@@ -24,6 +29,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         DebugPane.start {
             BuildInfoBlade()
             InputBlade(name: "Dark Mode", binding: InputBinding(self.$appService.darkModeEnabled))
+            LocalConsoleBlade()
         }
         
         appService.$darkModeEnabled
@@ -36,6 +42,8 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             .store(in: &bag)
         
+        LCManager.shared.print("App Started")
+
         return true
     }
 }

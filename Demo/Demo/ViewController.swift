@@ -4,6 +4,12 @@
 
 import Combine
 import UIKit
+import Alamofire
+import Logging
+import Pulse
+import LocalConsole
+import SwiftUI
+import PulseUI
 
 final class ViewController: UIViewController {
     
@@ -13,6 +19,10 @@ final class ViewController: UIViewController {
     
     private lazy var label = UILabel()
     
+    private lazy var logger = Logger(label: "app.antran.debugpane.demo")
+    private lazy var networkLogger = NetworkLogger()
+    var session: Session!
+
     init(appService: AppService) {
         self.appService = appService
         super.init(nibName: nil, bundle: nil)
@@ -39,7 +49,17 @@ final class ViewController: UIViewController {
         instructionLabel.numberOfLines = 0
         instructionLabel.font = .systemFont(ofSize: 12)
         
-        let stackView = UIStackView(arrangedSubviews: [label, instructionLabel])
+        let button = UIButton()
+        button.setTitleColor(.tintColor, for: .normal)
+        button.setTitle("Trigger Network", for: .normal)
+        button.addTarget(self, action: #selector(self.didTapButton), for: .touchUpInside)
+
+        let pulseButton = UIButton()
+        pulseButton.setTitleColor(.tintColor, for: .normal)
+        pulseButton.setTitle("Show Pulse UI", for: .normal)
+        pulseButton.addTarget(self, action: #selector(self.didTapPulseButton), for: .touchUpInside)
+
+        let stackView = UIStackView(arrangedSubviews: [label, instructionLabel, button, pulseButton])
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing
         stackView.spacing = 20
@@ -53,6 +73,14 @@ final class ViewController: UIViewController {
             NSLayoutConstraint(item: stackView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: stackView, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 0),
         ])
+        
+        let lcMonitor = ClosureEventMonitor()
+        lcMonitor.requestDidFinish = { _ in
+            LCManager.shared.print("Request Finished")
+        }
+        
+        let networkMonitor = NetworkLoggerEventMonitor(logger: networkLogger)
+        session = Session(eventMonitors: [lcMonitor, networkMonitor])
     }
     
     private func setupBindings() {
@@ -61,5 +89,15 @@ final class ViewController: UIViewController {
                 self?.label.text = "Dark Mode: \(value)"
             }
             .store(in: &bag)
+    }
+    
+    @objc func didTapButton() {
+        session.request("https://httpbin.org/get").responseString { response in
+            print(response)
+        }
+    }
+
+    @objc func didTapPulseButton() {
+        present(UIHostingController(rootView: MainView()), animated: true)
     }
 }

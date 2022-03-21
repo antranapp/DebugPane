@@ -2,6 +2,42 @@
   "object": {
     "pins": [
       {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire",
+        "state": {
+          "branch": null,
+          "revision": "f82c23a8a7ef8dc1a49a8bfc6a96883e79121864",
+          "version": "5.5.0"
+        }
+      },
+      {
+        "package": "LocalConsole",
+        "repositoryURL": "https://github.com/duraidabdul/LocalConsole",
+        "state": {
+          "branch": "main",
+          "revision": "d995119198d9c4379ac5b2e023452dbde9162ce0",
+          "version": null
+        }
+      },
+      {
+        "package": "Pulse",
+        "repositoryURL": "https://github.com/kean/Pulse",
+        "state": {
+          "branch": null,
+          "revision": "ba7a0e4668de7074470bd37a60b1f89325a416bb",
+          "version": "0.20.2"
+        }
+      },
+      {
+        "package": "swift-log",
+        "repositoryURL": "https://github.com/apple/swift-log.git",
+        "state": {
+          "branch": null,
+          "revision": "5d66f7ba25daf4f94100e7022febf3c75e37a6c7",
+          "version": "1.4.2"
+        }
+      },
+      {
         "package": "TweakPane",
         "repositoryURL": "https://github.com/antranapp/TweakPane",
         "state": {
