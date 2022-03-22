@@ -11,6 +11,24 @@
         }
       },
       {
+        "package": "DebugPane_LocalConsole",
+        "repositoryURL": "https://github.com/antranapp/DebugPane_LocalConsole",
+        "state": {
+          "branch": "main",
+          "revision": "22e486552c3e5f20e6b02db58c9a01fcb9b8c271",
+          "version": null
+        }
+      },
+      {
+        "package": "DebugPane_Pulse",
+        "repositoryURL": "https://github.com/antranapp/DebugPane_Pulse",
+        "state": {
+          "branch": "main",
+          "revision": "7457fdbc2a26d643d2ceb5645a9e79225e1072c0",
+          "version": null
+        }
+      },
+      {
         "package": "LocalConsole",
         "repositoryURL": "https://github.com/duraidabdul/LocalConsole",
         "state": {

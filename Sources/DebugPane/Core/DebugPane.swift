@@ -72,6 +72,15 @@ public extension DebugPane {
             navController.view.transform = CGAffineTransform(translationX: -navController.view.frame.size.width, y: 0)
             window.setActivationPercent(1)
         }) { completed in
+            
+            // https://stackoverflow.com/questions/71339237/swiftui-button-doesnt-work-in-uihostingcontroller
+            // It seems that the transform animation breaks the ability to tap
+            // any button in navController.
+            // We need to set the final frame origin for the navController
+            // when the animation completes, so that button interactions
+            // are possible again.
+            navController.view.frame.origin.x = UIScreen.main.bounds.width - drawerWidth - 0.5
+
             // Swap gestures
             openRecognizer.view?.removeGestureRecognizer(openRecognizer)
             window.addGestureRecognizer(dismissalRecognizer)

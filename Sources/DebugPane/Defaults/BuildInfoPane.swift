@@ -1,13 +1,10 @@
 //
-//  File.swift
-//  
-//
-//  Created by An Tran on 20/3/22.
+// Copyright © 2022 An Tran. All rights reserved.
 //
 
 import Foundation
-import TweakPane
 import SwiftUI
+import TweakPane
 
 public struct BuildInfoBlade: Blade {
     public var name: String = "Build Info"

@@ -1,13 +1,10 @@
 //
-//  NetworkLoggerEventMonitor.swift
-//  Demo
-//
-//  Created by An Tran on 22/3/22.
+// Copyright © 2022 An Tran. All rights reserved.
 //
 
+import Alamofire
 import Foundation
 import Pulse
-import Alamofire
 
 struct NetworkLoggerEventMonitor: EventMonitor {
     let logger: NetworkLogger

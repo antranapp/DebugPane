@@ -12,13 +12,13 @@
 		7F1EDFB327E5636E005D7EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F1EDFB227E5636E005D7EFF /* Assets.xcassets */; };
 		7F1EDFB627E5636E005D7EFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F1EDFB427E5636E005D7EFF /* LaunchScreen.storyboard */; };
 		7F8EC8A727E6999F00C13698 /* DebugPane in Frameworks */ = {isa = PBXBuildFile; productRef = 7F8EC8A627E6999F00C13698 /* DebugPane */; };
-		7F96130D27E937DC00AAF290 /* DebugPane_LocalConsole in Frameworks */ = {isa = PBXBuildFile; productRef = 7F96130C27E937DC00AAF290 /* DebugPane_LocalConsole */; };
 		7F96130F27E9390900AAF290 /* NetworkLoggerEventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96130E27E9390900AAF290 /* NetworkLoggerEventMonitor.swift */; };
-		7F96131227E9393400AAF290 /* Pulse in Frameworks */ = {isa = PBXBuildFile; productRef = 7F96131127E9393400AAF290 /* Pulse */; };
-		7F96131427E9393400AAF290 /* PulseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7F96131327E9393400AAF290 /* PulseCore */; };
-		7F96131627E9393400AAF290 /* PulseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7F96131527E9393400AAF290 /* PulseUI */; };
 		7F96131927E9397400AAF290 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 7F96131827E9397400AAF290 /* Logging */; };
 		7FA9E82F27E76FE000706758 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7FA9E82E27E76FE000706758 /* Alamofire */; };
+		7FD2F82027E9D84B00E21E8F /* CustomeBlade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2F81F27E9D84B00E21E8F /* CustomeBlade.swift */; };
+		7FD2F82227E9FB3C00E21E8F /* UIWindow+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2F82127E9FB3C00E21E8F /* UIWindow+Extensions.swift */; };
+		7FD2F82527E9FCF200E21E8F /* DebugPane_Pulse in Frameworks */ = {isa = PBXBuildFile; productRef = 7FD2F82427E9FCF200E21E8F /* DebugPane_Pulse */; };
+		7FD2F82827E9FD9400E21E8F /* DebugPane_LocalConsole in Frameworks */ = {isa = PBXBuildFile; productRef = 7FD2F82727E9FD9400E21E8F /* DebugPane_LocalConsole */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +29,9 @@
 		7F1EDFB527E5636E005D7EFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F1EDFB727E5636E005D7EFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F8EC8A527E6997B00C13698 /* DebugPane */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DebugPane; path = ..; sourceTree = "<group>"; };
-		7F96130B27E9377E00AAF290 /* DebugPane_LocalConsole */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DebugPane_LocalConsole; path = ../../DebugPane_LocalConsole; sourceTree = "<group>"; };
 		7F96130E27E9390900AAF290 /* NetworkLoggerEventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerEventMonitor.swift; sourceTree = "<group>"; };
+		7FD2F81F27E9D84B00E21E8F /* CustomeBlade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeBlade.swift; sourceTree = "<group>"; };
+		7FD2F82127E9FB3C00E21E8F /* UIWindow+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,13 +39,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F96131627E9393400AAF290 /* PulseUI in Frameworks */,
 				7F8EC8A727E6999F00C13698 /* DebugPane in Frameworks */,
 				7F96131927E9397400AAF290 /* Logging in Frameworks */,
-				7F96130D27E937DC00AAF290 /* DebugPane_LocalConsole in Frameworks */,
-				7F96131227E9393400AAF290 /* Pulse in Frameworks */,
+				7FD2F82527E9FCF200E21E8F /* DebugPane_Pulse in Frameworks */,
+				7FD2F82827E9FD9400E21E8F /* DebugPane_LocalConsole in Frameworks */,
 				7FA9E82F27E76FE000706758 /* Alamofire in Frameworks */,
-				7F96131427E9393400AAF290 /* PulseCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +53,6 @@
 		7F1EDF9D27E5636D005D7EFF = {
 			isa = PBXGroup;
 			children = (
-				7F96130B27E9377E00AAF290 /* DebugPane_LocalConsole */,
 				7F8EC8A527E6997B00C13698 /* DebugPane */,
 				7F1EDFA827E5636D005D7EFF /* Demo */,
 				7F1EDFA727E5636D005D7EFF /* Products */,
@@ -73,12 +71,14 @@
 		7F1EDFA827E5636D005D7EFF /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				7FD2F82127E9FB3C00E21E8F /* UIWindow+Extensions.swift */,
 				7F1EDFA927E5636D005D7EFF /* AppDelegate.swift */,
 				7F1EDFAD27E5636D005D7EFF /* ViewController.swift */,
 				7F1EDFB227E5636E005D7EFF /* Assets.xcassets */,
 				7F1EDFB427E5636E005D7EFF /* LaunchScreen.storyboard */,
 				7F1EDFB727E5636E005D7EFF /* Info.plist */,
 				7F96130E27E9390900AAF290 /* NetworkLoggerEventMonitor.swift */,
+				7FD2F81F27E9D84B00E21E8F /* CustomeBlade.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -109,11 +109,9 @@
 			packageProductDependencies = (
 				7F8EC8A627E6999F00C13698 /* DebugPane */,
 				7FA9E82E27E76FE000706758 /* Alamofire */,
-				7F96130C27E937DC00AAF290 /* DebugPane_LocalConsole */,
-				7F96131127E9393400AAF290 /* Pulse */,
-				7F96131327E9393400AAF290 /* PulseCore */,
-				7F96131527E9393400AAF290 /* PulseUI */,
 				7F96131827E9397400AAF290 /* Logging */,
+				7FD2F82427E9FCF200E21E8F /* DebugPane_Pulse */,
+				7FD2F82727E9FD9400E21E8F /* DebugPane_LocalConsole */,
 			);
 			productName = Demo;
 			productReference = 7F1EDFA627E5636D005D7EFF /* Demo.app */;
@@ -145,8 +143,9 @@
 			mainGroup = 7F1EDF9D27E5636D005D7EFF;
 			packageReferences = (
 				7FA9E82D27E76FE000706758 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				7F96131027E9393400AAF290 /* XCRemoteSwiftPackageReference "Pulse" */,
 				7F96131727E9397400AAF290 /* XCRemoteSwiftPackageReference "swift-log" */,
+				7FD2F82327E9FCF200E21E8F /* XCRemoteSwiftPackageReference "DebugPane_Pulse" */,
+				7FD2F82627E9FD9400E21E8F /* XCRemoteSwiftPackageReference "DebugPane_LocalConsole" */,
 			);
 			productRefGroup = 7F1EDFA727E5636D005D7EFF /* Products */;
 			projectDirPath = "";
@@ -174,6 +173,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FD2F82027E9D84B00E21E8F /* CustomeBlade.swift in Sources */,
+				7FD2F82227E9FB3C00E21E8F /* UIWindow+Extensions.swift in Sources */,
 				7F1EDFAE27E5636D005D7EFF /* ViewController.swift in Sources */,
 				7F96130F27E9390900AAF290 /* NetworkLoggerEventMonitor.swift in Sources */,
 				7F1EDFAA27E5636D005D7EFF /* AppDelegate.swift in Sources */,
@@ -394,14 +395,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		7F96131027E9393400AAF290 /* XCRemoteSwiftPackageReference "Pulse" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kean/Pulse";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.9;
-			};
-		};
 		7F96131727E9397400AAF290 /* XCRemoteSwiftPackageReference "swift-log" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-log";
@@ -418,31 +411,28 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		7FD2F82327E9FCF200E21E8F /* XCRemoteSwiftPackageReference "DebugPane_Pulse" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/antranapp/DebugPane_Pulse";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		7FD2F82627E9FD9400E21E8F /* XCRemoteSwiftPackageReference "DebugPane_LocalConsole" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/antranapp/DebugPane_LocalConsole";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		7F8EC8A627E6999F00C13698 /* DebugPane */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DebugPane;
-		};
-		7F96130C27E937DC00AAF290 /* DebugPane_LocalConsole */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DebugPane_LocalConsole;
-		};
-		7F96131127E9393400AAF290 /* Pulse */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7F96131027E9393400AAF290 /* XCRemoteSwiftPackageReference "Pulse" */;
-			productName = Pulse;
-		};
-		7F96131327E9393400AAF290 /* PulseCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7F96131027E9393400AAF290 /* XCRemoteSwiftPackageReference "Pulse" */;
-			productName = PulseCore;
-		};
-		7F96131527E9393400AAF290 /* PulseUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7F96131027E9393400AAF290 /* XCRemoteSwiftPackageReference "Pulse" */;
-			productName = PulseUI;
 		};
 		7F96131827E9397400AAF290 /* Logging */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -453,6 +443,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7FA9E82D27E76FE000706758 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		7FD2F82427E9FCF200E21E8F /* DebugPane_Pulse */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FD2F82327E9FCF200E21E8F /* XCRemoteSwiftPackageReference "DebugPane_Pulse" */;
+			productName = DebugPane_Pulse;
+		};
+		7FD2F82727E9FD9400E21E8F /* DebugPane_LocalConsole */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FD2F82627E9FD9400E21E8F /* XCRemoteSwiftPackageReference "DebugPane_LocalConsole" */;
+			productName = DebugPane_LocalConsole;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

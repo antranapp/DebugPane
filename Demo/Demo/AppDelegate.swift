@@ -2,13 +2,14 @@
 // Copyright © 2022 An Tran. All rights reserved.
 //
 
-import DebugPane
-import SwiftUI
 import Combine
-import UIKit
+import DebugPane
 import DebugPane_LocalConsole
+import DebugPane_Pulse
 import Logging
 import Pulse
+import SwiftUI
+import UIKit
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,9 +28,20 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
     
         DebugPane.start {
+            UIBlade(name: "UI Blade") {
+                Button(
+                    action: {
+                        print("pressed")
+                    },
+                    label: {
+                        Text("Custom UI Button")
+                    }
+                )
+            }
             BuildInfoBlade()
             InputBlade(name: "Dark Mode", binding: InputBinding(self.$appService.darkModeEnabled))
             LocalConsoleBlade()
+            PulseBlade(self.window?.rootViewController?.topMostViewController())
         }
         
         appService.$darkModeEnabled

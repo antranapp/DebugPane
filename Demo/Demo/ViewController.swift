@@ -2,14 +2,14 @@
 // Copyright © 2022 An Tran. All rights reserved.
 //
 
-import Combine
-import UIKit
 import Alamofire
+import Combine
+import LocalConsole
 import Logging
 import Pulse
-import LocalConsole
-import SwiftUI
 import PulseUI
+import SwiftUI
+import UIKit
 
 final class ViewController: UIViewController {
     
