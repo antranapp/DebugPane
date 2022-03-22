@@ -10,6 +10,7 @@ import Logging
 import Pulse
 import SwiftUI
 import UIKit
+import DebugPane_SwiftPublicIP
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -39,6 +40,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
                 )
             }
             BuildInfoBlade()
+            SwiftPublicIPBlade()
             InputBlade(name: "Dark Mode", binding: InputBinding(self.$appService.darkModeEnabled))
             LocalConsoleBlade()
             PulseBlade(self.window?.rootViewController?.topMostViewController())

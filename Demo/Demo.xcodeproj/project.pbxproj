@@ -19,6 +19,7 @@
 		7FD2F82227E9FB3C00E21E8F /* UIWindow+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2F82127E9FB3C00E21E8F /* UIWindow+Extensions.swift */; };
 		7FD2F82527E9FCF200E21E8F /* DebugPane_Pulse in Frameworks */ = {isa = PBXBuildFile; productRef = 7FD2F82427E9FCF200E21E8F /* DebugPane_Pulse */; };
 		7FD2F82827E9FD9400E21E8F /* DebugPane_LocalConsole in Frameworks */ = {isa = PBXBuildFile; productRef = 7FD2F82727E9FD9400E21E8F /* DebugPane_LocalConsole */; };
+		7FD2F82B27EA033F00E21E8F /* DebugPane_SwiftPublicIP in Frameworks */ = {isa = PBXBuildFile; productRef = 7FD2F82A27EA033F00E21E8F /* DebugPane_SwiftPublicIP */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 				7F96131927E9397400AAF290 /* Logging in Frameworks */,
 				7FD2F82527E9FCF200E21E8F /* DebugPane_Pulse in Frameworks */,
 				7FD2F82827E9FD9400E21E8F /* DebugPane_LocalConsole in Frameworks */,
+				7FD2F82B27EA033F00E21E8F /* DebugPane_SwiftPublicIP in Frameworks */,
 				7FA9E82F27E76FE000706758 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +114,7 @@
 				7F96131827E9397400AAF290 /* Logging */,
 				7FD2F82427E9FCF200E21E8F /* DebugPane_Pulse */,
 				7FD2F82727E9FD9400E21E8F /* DebugPane_LocalConsole */,
+				7FD2F82A27EA033F00E21E8F /* DebugPane_SwiftPublicIP */,
 			);
 			productName = Demo;
 			productReference = 7F1EDFA627E5636D005D7EFF /* Demo.app */;
@@ -146,6 +149,7 @@
 				7F96131727E9397400AAF290 /* XCRemoteSwiftPackageReference "swift-log" */,
 				7FD2F82327E9FCF200E21E8F /* XCRemoteSwiftPackageReference "DebugPane_Pulse" */,
 				7FD2F82627E9FD9400E21E8F /* XCRemoteSwiftPackageReference "DebugPane_LocalConsole" */,
+				7FD2F82927EA033F00E21E8F /* XCRemoteSwiftPackageReference "DebugPane_SwiftPublicIP" */,
 			);
 			productRefGroup = 7F1EDFA727E5636D005D7EFF /* Products */;
 			projectDirPath = "";
@@ -427,6 +431,14 @@
 				kind = branch;
 			};
 		};
+		7FD2F82927EA033F00E21E8F /* XCRemoteSwiftPackageReference "DebugPane_SwiftPublicIP" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/antranapp/DebugPane_SwiftPublicIP";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -453,6 +465,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7FD2F82627E9FD9400E21E8F /* XCRemoteSwiftPackageReference "DebugPane_LocalConsole" */;
 			productName = DebugPane_LocalConsole;
+		};
+		7FD2F82A27EA033F00E21E8F /* DebugPane_SwiftPublicIP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FD2F82927EA033F00E21E8F /* XCRemoteSwiftPackageReference "DebugPane_SwiftPublicIP" */;
+			productName = DebugPane_SwiftPublicIP;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
