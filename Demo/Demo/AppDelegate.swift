@@ -11,6 +11,7 @@ import Pulse
 import SwiftUI
 import UIKit
 import DebugPane_SwiftPublicIP
+import RxSwift
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,6 +30,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
     
         DebugPane.start {
+            RxBoolBlade(property: self.appService.boolValue)
             UIBlade(name: "UI Blade") {
                 Button(
                     action: {
@@ -62,6 +64,3 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-final class AppService: ObservableObject {
-    @Published var darkModeEnabled: Bool = true
-}

@@ -10,14 +10,18 @@ import Pulse
 import PulseUI
 import SwiftUI
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class ViewController: UIViewController {
     
     private var appService: AppService
     
     private var bag = Set<AnyCancellable>()
-    
+    private var disposeBag = DisposeBag()
+
     private lazy var label = UILabel()
+    private lazy var rxLabel = UILabel()
     
     private lazy var logger = Logger(label: "app.antran.debugpane.demo")
     private lazy var networkLogger = NetworkLogger()
@@ -42,6 +46,10 @@ final class ViewController: UIViewController {
         label.text = "Dark Mode: \(appService.darkModeEnabled)"
         label.font = .systemFont(ofSize: 20)
         label.textAlignment = .center
+
+        rxLabel.text = "\(appService.boolValue.value)"
+        rxLabel.font = .systemFont(ofSize: 20)
+        rxLabel.textAlignment = .center
         
         let instructionLabel = UILabel()
         instructionLabel.text = "Swipe from the right edge to open the Debug Menu"
@@ -59,7 +67,7 @@ final class ViewController: UIViewController {
         pulseButton.setTitle("Show Pulse UI", for: .normal)
         pulseButton.addTarget(self, action: #selector(self.didTapPulseButton), for: .touchUpInside)
 
-        let stackView = UIStackView(arrangedSubviews: [label, instructionLabel, button, pulseButton])
+        let stackView = UIStackView(arrangedSubviews: [label, rxLabel, instructionLabel, button, pulseButton])
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing
         stackView.spacing = 20
@@ -89,6 +97,18 @@ final class ViewController: UIViewController {
                 self?.label.text = "Dark Mode: \(value)"
             }
             .store(in: &bag)
+        
+        
+        appService.boolValue
+            .map { "\($0)" }
+            .subscribe(
+                onNext: { value in
+                    DispatchQueue.main.async {
+                        self.rxLabel.text = value
+                    }
+                }
+            )
+            .disposed(by: disposeBag)
     }
     
     @objc func didTapButton() {

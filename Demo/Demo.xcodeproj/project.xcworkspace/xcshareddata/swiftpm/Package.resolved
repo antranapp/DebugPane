@@ -56,6 +56,24 @@
         }
       },
       {
+        "package": "RxCombine",
+        "repositoryURL": "https://github.com/CombineCommunity/RxCombine",
+        "state": {
+          "branch": null,
+          "revision": "19474c2ac9fde613bba8513bf98990e1aa9831cd",
+          "version": "2.0.1"
+        }
+      },
+      {
+        "package": "RxSwift",
+        "repositoryURL": "https://github.com/ReactiveX/RxSwift",
+        "state": {
+          "branch": null,
+          "revision": "b4307ba0b6425c0ba4178e138799946c3da594f8",
+          "version": "6.5.0"
+        }
+      },
+      {
         "package": "swift-log",
         "repositoryURL": "https://github.com/apple/swift-log.git",
         "state": {
