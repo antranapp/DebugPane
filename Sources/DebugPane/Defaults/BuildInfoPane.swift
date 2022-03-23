@@ -7,7 +7,7 @@ import SwiftUI
 import TweakPane
 
 public struct BuildInfoBlade: Blade {
-    public var name: String = "Build Info"
+    public var name: String? = "Build Info"
     
     public init() {}
     
