@@ -6,11 +6,11 @@ import Combine
 import DebugPane
 import DebugPane_LocalConsole
 import DebugPane_Pulse
+import DebugPane_SwiftPublicIP
 import Logging
 import Pulse
 import SwiftUI
 import UIKit
-import DebugPane_SwiftPublicIP
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
