@@ -28,8 +28,8 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = ViewController(appService: appService)
         window?.makeKeyAndVisible()
     
-        DebugPane.start {
-            UIBlade(name: "UI Blade") {
+        DebugPane.start(setup: [CustomBlade.setup]) {
+            UIBlade {
                 Button(
                     action: {
                         print("pressed")
@@ -43,7 +43,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
             SwiftPublicIPBlade()
             InputBlade(name: "Dark Mode", binding: InputBinding(self.$appService.darkModeEnabled))
             LocalConsoleBlade()
-            PulseBlade(self.window?.rootViewController?.topMostViewController())
+            PulseBlade( presentingViewController: { self.window?.rootViewController?.topMostViewController() } )
         }
         
         appService.$darkModeEnabled

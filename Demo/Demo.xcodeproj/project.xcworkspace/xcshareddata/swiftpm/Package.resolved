@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/antranapp/DebugPane_LocalConsole",
         "state": {
           "branch": "main",
-          "revision": "22e486552c3e5f20e6b02db58c9a01fcb9b8c271",
+          "revision": "f4ce0122a139a4d2b485e9e23d2f9eb3b7193314",
           "version": null
         }
       },
@@ -24,7 +24,7 @@
         "repositoryURL": "https://github.com/antranapp/DebugPane_Pulse",
         "state": {
           "branch": "main",
-          "revision": "d05a2977c852c90844886f86bee9c26cb11881d5",
+          "revision": "2b60e06ec7d7292e79d42c962b17a7e08d9b01f1",
           "version": null
         }
       },
@@ -33,7 +33,7 @@
         "repositoryURL": "https://github.com/antranapp/DebugPane_SwiftPublicIP",
         "state": {
           "branch": "main",
-          "revision": "ef1750f0a99fa77cda5efc3b18b56bb9fc208380",
+          "revision": "535f7081bc4b5e6b575d19d3621a61f59663065e",
           "version": null
         }
       },
@@ -78,7 +78,7 @@
         "repositoryURL": "https://github.com/antranapp/TweakPane",
         "state": {
           "branch": "master",
-          "revision": "d9627f8b172d4ae10213c2d8718b128bd67ea322",
+          "revision": "2b5650dc881c6edfddc6c5dfbc50442297ab5ea8",
           "version": null
         }
       }

@@ -21,11 +21,14 @@ public final class DebugPane: NSObject {
     
     public static func start(
         with gesture: GestureType = .panFromRight,
+        setup: [() -> Void] = [],
         @BladesBuilder _ content: @escaping () -> [Blade]
     ) {
         startOnce.perform {
             initializeWindow(content)
             setGestureType(gesture)
+            
+            setup.forEach { $0() }
         }
     }
     

@@ -7,7 +7,7 @@ import SwiftUI
 import TweakPane
 
 public struct CustomBlade: Blade {
-    public var name: String = "Custom Blade"
+    public var name: String? = "Custom Blade"
     
     public init() {}
     
@@ -26,5 +26,11 @@ private struct ContentView: View {
                 Text("Press me")
             }
         )
+    }
+}
+
+extension CustomBlade {
+    static func setup() {
+        print("setup me")
     }
 }
