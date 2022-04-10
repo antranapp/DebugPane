@@ -11,6 +11,7 @@
 		7F1EDFAE27E5636D005D7EFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1EDFAD27E5636D005D7EFF /* ViewController.swift */; };
 		7F1EDFB327E5636E005D7EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F1EDFB227E5636E005D7EFF /* Assets.xcassets */; };
 		7F1EDFB627E5636E005D7EFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F1EDFB427E5636E005D7EFF /* LaunchScreen.storyboard */; };
+		7F454AF6280399C900C704B5 /* ChildViewBlade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F454AF5280399C800C704B5 /* ChildViewBlade.swift */; };
 		7F8EC8A727E6999F00C13698 /* DebugPane in Frameworks */ = {isa = PBXBuildFile; productRef = 7F8EC8A627E6999F00C13698 /* DebugPane */; };
 		7F96130F27E9390900AAF290 /* NetworkLoggerEventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96130E27E9390900AAF290 /* NetworkLoggerEventMonitor.swift */; };
 		7F96131927E9397400AAF290 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 7F96131827E9397400AAF290 /* Logging */; };
@@ -29,6 +30,7 @@
 		7F1EDFB227E5636E005D7EFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F1EDFB527E5636E005D7EFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F1EDFB727E5636E005D7EFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F454AF5280399C800C704B5 /* ChildViewBlade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewBlade.swift; sourceTree = "<group>"; };
 		7F8EC8A527E6997B00C13698 /* DebugPane */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DebugPane; path = ..; sourceTree = "<group>"; };
 		7F96130E27E9390900AAF290 /* NetworkLoggerEventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerEventMonitor.swift; sourceTree = "<group>"; };
 		7FD2F81F27E9D84B00E21E8F /* CustomeBlade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeBlade.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				7F1EDFB727E5636E005D7EFF /* Info.plist */,
 				7F96130E27E9390900AAF290 /* NetworkLoggerEventMonitor.swift */,
 				7FD2F81F27E9D84B00E21E8F /* CustomeBlade.swift */,
+				7F454AF5280399C800C704B5 /* ChildViewBlade.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				7FD2F82227E9FB3C00E21E8F /* UIWindow+Extensions.swift in Sources */,
 				7F1EDFAE27E5636D005D7EFF /* ViewController.swift in Sources */,
 				7F96130F27E9390900AAF290 /* NetworkLoggerEventMonitor.swift in Sources */,
+				7F454AF6280399C900C704B5 /* ChildViewBlade.swift in Sources */,
 				7F1EDFAA27E5636D005D7EFF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

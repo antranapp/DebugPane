@@ -44,6 +44,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
             InputBlade(name: "Dark Mode", binding: InputBinding(self.$appService.darkModeEnabled))
             LocalConsoleBlade()
             PulseBlade( presentingViewController: { self.window?.rootViewController?.topMostViewController() } )
+            ChildViewBlade(navViewController: DebugPane.navController)
         }
         
         appService.$darkModeEnabled

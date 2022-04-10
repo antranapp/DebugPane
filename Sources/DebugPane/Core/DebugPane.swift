@@ -14,7 +14,7 @@ public final class DebugPane: NSObject {
 
     static var window: DebugPaneWindow!
     
-    static var navController: UINavigationController!
+    public static var navController: UINavigationController!
     static var viewController: UIViewController!
     static let drawerWidth: CGFloat = UIScreen.main.bounds.width * 3 / 4
     private static let startOnce = DispatchOnce()
